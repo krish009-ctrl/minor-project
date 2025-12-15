@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f3f3f3;
+    transition: all 0.3s ease;
+}
+
+.top-bar {
+    background-color: #f8f8f8;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    animation: fadeIn 1s ease-in-out;
+    background: linear-gradient(-45deg, #831414, #e73c7e, #cf6c09, #9a2204);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+.top-bar p {
+    all: unset;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: linear-gradient(90deg, #000000, #3e4141);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.navbar.sticky {
+    background-color: #333333;
+    transform: translateY(0);
+}
+
+.navbar-brand {
+    color: #ffffff !important;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    max-height: 50px;
+    margin-right: 10px;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.nav-item a {
+    color: #ffffff !important;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    margin-right: 15px;
+    transition: color 0.3s ease, transform 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #ffd700;
+    transform: scale(1.01);
+}
+
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #ffd700;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+.navbar ul li a:hover::after {
+    width: 40px;
+}
+
+.nav-link.login-btn {
+    color: #fe792c !important;
+    padding: 8px 20px;
+    font-weight: 600;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    background: rgba(233, 157, 131, 0.112);
+    transition: all 0.3s ease;
+}
+
+.nav-link.login-btn:hover {
+    color: #f0bf9b !important;
+    border-color: #edb387;
+    background: rgba(231, 60, 126, 0.2);
+    transform: translateY(-1px);
+}
+
+.nav-link.login-btn::after {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        display: flex;
+        flex-direction: column ;
+        width: 100%;
+    }
+
+    .navbar-nav .nav-item {
+        text-align: left;
+        width: 100%;
+    }
+
+    .navbar-nav .nav-item a {
+        padding: 10px 0;
+    }
+
+    .navbar ul li a:hover::after {
+        width: 25%;
+    }
+}
+
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Order</title>
+  <link rel="icon" href="/images/main_logo.png" type="image/icon type">
+  <link rel="stylesheet" href="/css/track-order.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+  <main>
+    <section class="track-order-container">
+      <h1>Track Your Order</h1>
+      <form>
+        <label for="order-id">Order ID:</label>
+        <input type="text" id="order-id" name="order-id" placeholder="Enter your Order ID" required>
+        <button type="submit">Track Order</button>
+      </form>
+    </section>
+  </main>
+  
+
+<script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.body.insertAdjacentHTML('afterbegin', data);
+    });
+
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.body.insertAdjacentHTML('beforeend', data);
+    });
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

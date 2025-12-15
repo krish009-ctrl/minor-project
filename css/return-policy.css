@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f3f3f3;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .navbar ul li a {
+        font-size: 18px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar.active ul {
+        display: flex;
+    }
+}
+
+.policy-container {
+    padding-top: 80px;
+    padding: 50px 20px;
+}
+
+.policy-container h1 {
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.policy-container p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.policy-container h2 {
+    margin-top: 20px;
+    color: #444;
+}
+
+.policy-container ul,
+.policy-container ol {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.policy-container li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.policy-container a {
+    color: #6a11cb;
+    text-decoration: none;
+}
+
+.policy-container a:hover {
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
